@@ -1,3 +1,4 @@
+Coding Ninja link - https://www.codingninjas.com/studio/problems/selection-sort_624469?utm_source=striver&utm_medium=website&utm_campaign=a_zcoursetuf&leftPanelTab=1
 #SELECTION SORT
 
 from typing import List
@@ -10,3 +11,4 @@ def selectionSort(arr List[int]) - None
                 mini = j      
         arr[i], arr[mini] = arr[mini], arr[i]
     return arr
+

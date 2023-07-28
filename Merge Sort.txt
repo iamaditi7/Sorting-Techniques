@@ -1,0 +1,34 @@
+#Merge Sort
+
+def merge(arr: [int], l: int, mid: int, r: int):
+    left = l
+    right = mid + 1
+    temp = []
+
+    while left <= mid and right <= r:
+        if arr[left] <= arr[right]:
+            temp.append(arr[left])
+            left += 1
+        else:
+            temp.append(arr[right])
+            right += 1
+
+    while left <= mid:
+        temp.append(arr[left])
+        left += 1
+
+    while right <= r:
+        temp.append(arr[right])
+        right += 1
+
+    # Copy the sorted elements from temp back to arr
+    for i in range(len(temp)):
+        arr[l + i] = temp[i]
+
+
+def mergeSort(arr: [int], l: int, r: int):
+    if l < r:
+        mid = (l + r) // 2
+        mergeSort(arr, l, mid)
+        mergeSort(arr, mid + 1, r)
+        merge(arr, l, mid, r)
